@@ -2,7 +2,7 @@ import platform
 import subprocess
 
 from flask import Flask, render_template, jsonify
-from nids import packet_capture as pk, config, winpcap_install
+from nids import packet_capture as pk, config, npcap_install
 
 app = Flask(__name__)
 
@@ -16,5 +16,5 @@ def index():
 
 if __name__ == '__main__':
     config.get_packet_location()
-    winpcap_install.main()
+    npcap_install.main()
     app.run()
