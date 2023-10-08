@@ -45,4 +45,4 @@ def start_capture(*, output_filename: str):
 
 def write_to_csv(*, pcap_filename: str, output_filename: str):
     packets = pcapHandler(file=pcap_filename)
-    packets.to_DF().to_csv()
+    packets.to_DF().to_csv(output_filename)
