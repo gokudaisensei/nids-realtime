@@ -2,7 +2,7 @@
 
 ## 1. Pre-requisites
 
-1. Python 3.11.5
+1. Python 3.11.2
 2. pipenv
 
    **Install the dependencies using the command:**

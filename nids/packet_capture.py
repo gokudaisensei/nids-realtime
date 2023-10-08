@@ -1,6 +1,7 @@
 import time
 import socket
 from scapy.all import sniff, wrpcap, IFACES
+from pcap_handler import pcapHandler
 
 
 def packet_capture(packet):
@@ -41,3 +42,7 @@ def start_capture(*, output_filename: str):
 
     # Save captured packets to a PCAP file
     wrpcap(output_filename, packets)
+
+def write_to_csv(*, pcap_filename: str, output_filename: str):
+    packets = pcapHandler(file=pcap_filename)
+    packets.to_DF().to_csv()
